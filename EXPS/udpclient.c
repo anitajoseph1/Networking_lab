@@ -43,7 +43,7 @@ int main(){
         }
         printf("Message send\nWaiting for response...\n");
         n = recvfrom(sockfd,buff,sizeof(buff),0,(SA*)&x,&addr);
-        buff[n] = '\n';
+        buff[n] = '\0';
         if(n>1){
             printf("received: %s",buff);
         }
