@@ -46,6 +46,7 @@ int main(){
         if(n>1){
             printf("received: %s",buff);
         }
+        printf("Enter the message to be send: ");
         scanf("%s",buff);
         sendto(sockfd,buff,n,0,(SA*)&x,addr);
     }while(strcmp(buff,"quit") != 0);
